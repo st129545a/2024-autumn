@@ -1,40 +1,30 @@
 #include <iostream>
 
-int main() 
+int main(int argc, char* argv[]) 
 {
-    int n = 0;
-    scanf_s("%d", n);
+    int n;
+    scanf_s("%d", &n);
 
-    int max_age = -1; 
-    int nomOld = -1; 
+    int max_age = -1;
+    int oldest_man_index = -1;
 
-    for (int i = 0; i < n; ++i) 
+    for (int i = 1; i <= n; ++i) 
     {
-        int v = 0;
-        int s = 0;
-        printf("%d", &v);
-        printf("%d", &s);
+        int v, s;
+        scanf_s("%d", &v);
+        scanf_s("%d", &s);
 
-        if (s == 1) 
-        { 
+        if (s == 1)
+        {
             if (v > max_age) 
             {
                 max_age = v;
-                nomOld = i + 1;
-            }
-            else if (v == max_age) 
-            {
-                nomOld = std::min(nomOld, i + 1);
+                oldest_man_index = i;
             }
         }
     }
+    printf("%d", oldest_man_index == -1 ? -1 : oldest_man_index);
 
-    if (nomOld == -1) {
-        printf("%d", -1);
-    }
-    else {
-        printf("%d", nomOld);
-    }
 
     EXIT_SUCCESS;
 }

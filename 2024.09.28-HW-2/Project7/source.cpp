@@ -1,25 +1,28 @@
-#include <iostream>
-#include <cmath>
-
-main()
+#include<cstdio>
+#include<iostream>
+int main(int argc, char* argv[])
 {
-    int a = 0;
-    double c = 0;
-    double m = 0;
-    double n = 0;
+	int k = 0;
+	int m = 0;
+	int n = 0;
 
-    scanf_s("%d", &a);
-    scanf_s("%f", &m);
-    scanf_s("%f", &n);
-
-    if (n <= a)
-    {
-        printf("%f", m * 2);
-    }
-
-    c = ceil((2 * n) / a);
-    printf("%f", m * c);
+	scanf_s("%d", &k);
+	scanf_s("%d", &m);
+	scanf_s("%d", &n);
 
 
-    EXIT_SUCCESS;
+	if (n % k == 0)
+	{
+		printf("%d", (n / k) * 2 * m);
+	}
+	else if ((n % k) <= (k / 2) && (n / k) > 0)
+	{
+		printf("%d", (n / k + 1) * 2 * m - m);
+	}
+	else
+	{
+		printf("%d", (n / k + 1) * 2 * m);
+	}
+
+	EXIT_SUCCESS;
 }

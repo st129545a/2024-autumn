@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-int main() 
+int main(int argc, char* argv[])
 {
     int n;
     scanf_s("%d", &n);

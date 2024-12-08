@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 int main(int argc, char* argv[])
@@ -12,7 +11,8 @@ int main(int argc, char* argv[])
 	int a1 = a;
 	int b1 = b;
 
-	while (b != 0) {
+	while (b != 0) 
+	{
 		int c = b;
 		b = a % b;
 		a = c;

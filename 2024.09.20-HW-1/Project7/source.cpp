@@ -11,5 +11,6 @@ int main(int argc, char* argv[])
 	int s = V * T;
 	printf("%d", (s % 109 + 109) % 109 + 1);
 
+
 	return EXIT_SUCCESS;
 }

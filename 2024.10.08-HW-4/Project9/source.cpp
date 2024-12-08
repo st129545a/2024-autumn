@@ -2,35 +2,31 @@
 
 int main(int argc, char* argv[]) 
 {
-    int n;
+    int n = 0;
     scanf_s("%d", &n);
 
-    int heights[100]; 
-    for (int i = 0; i < n; ++i) 
+    int A[100];
+    for (int i = 0; i < n; i++) 
     {
-        scanf_s("%d", &heights[i]);
+        std::cin >> A[i];
     }
 
-    int x; 
+    int x= 0;
     scanf_s("%d", &x);
 
-    int p = 1;
+    int position = n + 1;
 
-    for (int i = 0; i < n; ++i) 
+    for (int i = 0; i < n; i++) 
     {
-        if (heights[i] > x) 
+        if (A[i] < x)
         {
-            p++; 
-        }
-        else 
-        {
-            p++; 
+            position = i + 1;
             break;
         }
     }
 
-    printf("%d", p);
-
+    printf("%d", position);
+    
 
     EXIT_SUCCESS;
 }
